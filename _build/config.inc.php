@@ -11,21 +11,21 @@ if (!defined('MODX_CORE_PATH')) {
 return [
     'name' => 'importMsie',
     'name_lower' => 'importmsie',
-    'version' => '2.0.0',
+    'version' => '1.0.0',
     'release' => 'pl',
     // Install package to site right after build
     'install' => true,
     // Which elements should be updated on package upgrade
     'update' => [
         'chunks' => false,
-        'menus' => true,
-        'permission' => true,
+        'menus' => false,
+        'permission' => false,
         'plugins' => true,
-        'policies' => true,
+        'policies' => false,
         'policy_templates' => true,
         'resources' => false,
         'settings' => false,
-        'snippets' => true,
+        'snippets' => false,
         'templates' => false,
         'widgets' => false,
     ],

@@ -5,7 +5,7 @@ return [
         'file' => 'importmsie',
         'description' => '',
         'events' => [
-            'OnManagerPageInit' => [],
+            'OnManagerPageBeforeRender' => [],
         ],
     ],
 ];

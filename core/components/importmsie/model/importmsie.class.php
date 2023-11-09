@@ -31,4 +31,15 @@ class importMsie
         $this->modx->lexicon->load('importmsie:default');
     }
 
+    public function loadJsCss(){
+        $this->modx->controller->addJavascript($this->config['jsUrl'].'mgr/importmsie.js');
+        $this->modx->controller->addJavascript($this->config['jsUrl'].'mgr/widgets/items.windows.js');
+
+        $this->modx->controller->addHtml('<script type="text/javascript">
+            importMsie.config = ' . json_encode($this->config) . ';
+            importMsie.config.connector_url = "' . $this->config['connectorUrl'] . '";
+        </script>
+        ');
+    }
+
 }
